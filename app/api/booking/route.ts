@@ -7,6 +7,7 @@ function text(value: unknown, maxLength: number) { return typeof value === "stri
 function escapeHtml(value: string) { return value.replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[character] || character); }
 
 export async function POST(request: Request) {
+  if (process.env.BOOKINGS_ENABLED !== "true") return NextResponse.json({ message: "Nails By Wyjona is nog niet geopend. Afspraken maken is binnenkort mogelijk." }, { status: 503 });
   const bookingEmail = process.env.BOOKING_EMAIL;
   const resendKey = process.env.RESEND_API_KEY;
   if (!bookingEmail || !resendKey) return NextResponse.json({ message: "De e-mailontvangst wordt nog ingesteld. Probeer het later opnieuw." }, { status: 503 });

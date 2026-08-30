@@ -45,6 +45,8 @@ button { color: inherit; }
   backdrop-filter: blur(22px) saturate(1.2);
   -webkit-backdrop-filter: blur(22px) saturate(1.2);
 }
+.prelaunch-bar { min-height: 32px; display: flex; align-items: center; justify-content: center; gap: 13px; padding: 7px 18px; background: var(--ink); color: #f6eee8; font-size: 9px; line-height: 1.3; letter-spacing: .14em; text-align: center; text-transform: uppercase; }
+.prelaunch-bar span { width: 18px; height: 1px; flex: 0 0 auto; background: #d5af9a; }
 .nav-shell {
   width: min(1440px, calc(100% - 64px));
   height: 84px;
@@ -78,7 +80,7 @@ button { color: inherit; }
 .menu-lines i:last-child { top: 13px; }
 .mobile-menu[open] .menu-lines i:first-child { top: 9px; transform: rotate(45deg); }
 .mobile-menu[open] .menu-lines i:last-child { top: 9px; transform: rotate(-45deg); }
-.mobile-menu-panel { position: fixed; z-index: 60; inset: 76px 0 auto; min-height: calc(100svh - 76px); display: flex; flex-direction: column; padding: 32px 24px 26px; background: rgba(247,243,237,.985); border-top: 1px solid var(--line); animation: menuIn .35s cubic-bezier(.22,.75,.22,1) both; }
+.mobile-menu-panel { position: fixed; z-index: 60; inset: 108px 0 auto; min-height: calc(100svh - 108px); display: flex; flex-direction: column; padding: 32px 24px 26px; background: rgba(247,243,237,.985); border-top: 1px solid var(--line); animation: menuIn .35s cubic-bezier(.22,.75,.22,1) both; }
 .mobile-menu-top { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
 .mobile-menu-top > small { max-width: 115px; }
 .mobile-nav { display: flex; flex-direction: column; }
@@ -124,6 +126,18 @@ h1 em { font-weight: 400; color: #9f7966; }
 .trust-bar div { display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; border-right: 1px solid var(--line); }
 .trust-bar div:last-child { border: 0; }
 .trust-bar svg { width: 18px; height: 18px; color: #9f7966; flex: 0 0 auto; }
+
+.home-pricing { padding-block: 140px; border-bottom: 1px solid var(--line); }
+.pricing-list { border-top: 1px solid var(--ink); }
+.price-row { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; gap: 24px; align-items: center; min-height: 94px; padding: 18px 4px; border-bottom: 1px solid var(--line); transition: padding .25s ease, background .25s ease; }
+.price-row:hover { padding-inline: 16px; background: rgba(255,253,250,.55); }
+.price-number { color: #9f7966; font-size: 9px; letter-spacing: .1em; }
+.price-row > div { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.price-row strong { font: 400 27px/1.05 Georgia, serif; }
+.price-row small { color: var(--muted); font-size: 11px; letter-spacing: .04em; }
+.price-row b { font: 400 27px/1 Georgia, serif; white-space: nowrap; }
+.pricing-more { display: flex; align-items: center; justify-content: flex-end; gap: 12px; width: max-content; margin: 28px 0 0 auto; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.pricing-more svg { width: 15px; height: 15px; }
 
 .section-heading { margin-bottom: 62px; }
 .heading-split { display: grid; grid-template-columns: 1.3fr .7fr; gap: 70px; align-items: end; }
@@ -220,6 +234,30 @@ h1 em { font-weight: 400; color: #9f7966; }
 .footer-bottom { display: flex; justify-content: space-between; padding-block: 22px; border-top: 1px solid rgba(255,255,255,.1); color: #7f7771; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
 
 /* Inner pages */
+.prices-hero { min-height: 610px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 100px; align-items: end; padding-block: 120px 90px; border-bottom: 1px solid var(--line); }
+.prices-hero h1, .opening-copy h1 { font-size: clamp(68px, 7vw, 108px); }
+.prices-intro { padding: 28px 0 4px; border-top: 1px solid var(--ink); }
+.prices-intro > span, .price-note > span { color: #9f7966; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+.prices-intro p { margin: 21px 0 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+.prices-main { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(65px, 8vw, 120px); padding-block: 120px 145px; align-items: start; }
+.price-note { position: sticky; top: 145px; padding: 34px; background: #e9ded3; }
+.price-note h2 { margin: 58px 0 18px; font: 400 37px/1.05 Georgia, serif; letter-spacing: -.035em; }
+.price-note p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+
+.opening-hero { min-height: 750px; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(60px, 8vw, 120px); align-items: center; padding-block: 90px; }
+.opening-copy > p:not(.eyebrow) { max-width: 580px; margin: 34px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
+.opening-actions { display: flex; align-items: center; gap: 28px; margin-top: 38px; }
+.opening-image { position: relative; height: 650px; overflow: hidden; background: var(--nude); }
+.opening-image img { object-fit: cover; }
+.opening-image > span { position: absolute; right: 18px; bottom: 18px; padding: 11px 13px; background: rgba(255,253,250,.9); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.opening-status { display: grid; grid-template-columns: repeat(3, 1fr); padding-bottom: 140px; }
+.opening-status article { position: relative; min-height: 330px; padding: 32px; border: 1px solid var(--line); border-right: 0; }
+.opening-status article:last-child { border-right: 1px solid var(--line); }
+.opening-status article > svg { width: 24px; height: 24px; color: #9f7966; }
+.opening-status article > span { position: absolute; top: 34px; right: 32px; color: var(--muted); font-size: 9px; }
+.opening-status h2 { margin: 100px 0 16px; font: 400 30px/1 Georgia, serif; }
+.opening-status p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
 .inner-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100svh - 88px); padding: 70px 0; gap: 80px; align-items: center; }
 .inner-hero-copy h1, .booking-page-copy h1, .not-found h1, .legal h1 { margin: 0; font: 400 clamp(70px, 8vw, 116px)/.87 Georgia, serif; letter-spacing: -.065em; }
 .inner-hero-copy h1 em, .booking-page-copy h1 em, .not-found h1 em, .legal h1 em { color: #9f7966; font-weight: 400; }
@@ -388,6 +426,12 @@ h1 em { font-weight: 400; color: #9f7966; }
   .booking-page-hero { gap: 50px; }
   .booking-side-image { height: 600px; order: -1; }
   .planner-section { gap: 50px; }
+  .prices-hero, .prices-main, .opening-hero { grid-template-columns: 1fr; }
+  .prices-hero { min-height: 0; gap: 55px; padding-block: 100px 75px; }
+  .prices-main { gap: 60px; padding-block: 90px 120px; }
+  .price-note { position: static; }
+  .opening-hero { gap: 55px; }
+  .opening-image { height: 620px; order: -1; }
 }
 @media (max-width: 520px) {
   .site-header { background: rgba(247,243,237,.94); }
@@ -395,7 +439,9 @@ h1 em { font-weight: 400; color: #9f7966; }
   .header-brand strong { font-size: 25px; }
   .header-brand em { margin-left: 22px; font-size: 15px; }
   .mobile-menu > summary > small { display: none; }
-  .mobile-menu-panel { inset: 70px 0 auto; min-height: calc(100svh - 70px); padding: 28px 20px 24px; }
+  .prelaunch-bar { min-height: 30px; gap: 8px; padding-inline: 12px; font-size: 7px; letter-spacing: .1em; }
+  .prelaunch-bar span { width: 10px; }
+  .mobile-menu-panel { inset: 100px 0 auto; min-height: calc(100svh - 100px); padding: 28px 20px 24px; }
   .mobile-nav a { min-height: 72px; padding: 19px 0; font-size: 30px; }
   .hero { position: relative; display: block; min-height: calc(100svh - 70px); color: white; border: 0; overflow: hidden; }
   .hero-visual { position: absolute; inset: 0; min-height: 0; background: #6f5a4e; }
@@ -420,6 +466,13 @@ h1 em { font-weight: 400; color: #9f7966; }
   .trust-bar div:nth-child(2n) { border-right: 0 !important; }
   .trust-bar div:nth-child(n+3) { border-bottom: 0 !important; }
   .trust-bar svg { min-width: 18px; }
+  .home-pricing { width: calc(100% - 32px); padding-block: 88px; }
+  .price-row { grid-template-columns: 26px minmax(0, 1fr) auto; gap: 10px; min-height: 82px; padding-block: 15px; }
+  .price-row:hover { padding-inline: 4px; }
+  .price-row strong { font-size: 21px; }
+  .price-row small { max-width: 190px; font-size: 9px; line-height: 1.35; }
+  .price-row b { font-size: 21px; }
+  .pricing-more { max-width: 100%; font-size: 9px; }
   .services { width: 100%; padding: 90px 0; }
   .services .section-heading { width: calc(100% - 32px); margin-inline: auto; }
   .section-heading { margin-bottom: 38px; }
@@ -469,6 +522,22 @@ h1 em { font-weight: 400; color: #9f7966; }
   .values-grid article { min-height: 320px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 0; }
   .values-grid article:last-child { min-height: 440px; border-bottom: 1px solid var(--line); }
   .simple-cta { min-height: 490px; padding-inline: 12px; }
+  .prices-hero { width: calc(100% - 32px); gap: 42px; padding-block: 78px 62px; }
+  .prices-hero h1, .opening-copy h1 { font-size: clamp(50px, 14vw, 63px); line-height: .91; }
+  .prices-main { width: calc(100% - 32px); gap: 48px; padding-block: 70px 90px; }
+  .price-note { padding: 28px 24px; }
+  .price-note h2 { margin-top: 50px; font-size: 32px; }
+  .opening-hero { width: 100%; padding: 0 0 75px; gap: 48px; }
+  .opening-copy { padding-inline: 16px; }
+  .opening-image { width: 100%; height: 58svh; max-height: 600px; }
+  .opening-copy > p:not(.eyebrow) { margin-top: 26px; font-size: 14px; }
+  .opening-actions { display: grid; gap: 22px; align-items: start; }
+  .opening-actions .button { justify-content: space-between; gap: 14px; width: 100%; font-size: 9px; }
+  .opening-actions .text-link { width: max-content; }
+  .opening-status { width: calc(100% - 32px); grid-template-columns: 1fr; padding-bottom: 90px; }
+  .opening-status article { min-height: 285px; border-right: 1px solid var(--line); border-bottom: 0; }
+  .opening-status article:last-child { border-bottom: 1px solid var(--line); }
+  .opening-status h2 { margin-top: 75px; }
   .planner-section { padding-block: 88px; gap: 36px; }
   .booking-form { width: 100%; max-width: 100%; min-width: 0; padding: 22px 14px; margin: 0; overflow: hidden; }
   .booking-form-upgraded { padding: 22px 14px; box-shadow: 0 18px 50px rgba(32,27,24,.06); }

@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ArrowDownIcon, ArrowRightIcon, ArrowUpRightIcon, ClockIcon, HeartIcon, HomeIcon, MapPinIcon, SparklesIcon } from "@/components/icons";
+import { PricingList } from "@/components/pricing-list";
+import { ArrowRightIcon, ArrowUpRightIcon, ClockIcon, HeartIcon, HomeIcon, MapPinIcon, SparklesIcon } from "@/components/icons";
+
+export const metadata: Metadata = {
+  title: "Nagelsalon Sneek | Gelnagels & Nail Art",
+  description: "Nails By Wyjona is een nieuwe nagelsalon aan huis in Sneek voor gelnagels, French nails en nail art. Binnenkort geopend — bekijk alvast de kennismakingsprijzen.",
+  alternates: { canonical: "/" },
+};
 
 const services = [
   { number: "01", title: "Gelnagels", text: "Sterke, verzorgde nagels met een prachtige glanzende finish.", image: "/images/hero-nude-gelnails.png" },
@@ -27,12 +35,12 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow hero-anim hero-anim-1"><span /> Gelnagels &amp; nail art · Sneek</p>
+          <p className="eyebrow hero-anim hero-anim-1"><span /> Binnenkort open · Sneek</p>
           <h1 className="hero-anim hero-anim-2">Mooie nagels,<br /><em>helemaal jouw stijl.</em></h1>
-          <p className="hero-intro hero-anim hero-anim-3">Van een rustige, natuurlijke look tot creatieve nail art. Bij Nails By Wyjona draait alles om mooie, verzorgde nagels waar jij blij van wordt.</p>
+          <p className="hero-intro hero-anim hero-anim-3">Nails By Wyjona opent binnenkort als persoonlijke nagelsalon aan huis in Sneek. Maak alvast kennis en ontdek wat je straks kunt verwachten.</p>
           <div className="hero-actions">
-            <Link href="/afspraak" className="button button-dark hero-anim hero-anim-4">Plan je afspraak <ArrowUpRightIcon /></Link>
-            <a href="#behandelingen" className="text-link hero-anim hero-anim-4">Bekijk behandelingen <ArrowDownIcon /></a>
+            <Link href="/over-mij" className="button button-dark hero-anim hero-anim-4">Maak kennis <ArrowUpRightIcon /></Link>
+            <Link href="/prijzen" className="text-link hero-anim hero-anim-4">Bekijk prijzen <ArrowRightIcon /></Link>
           </div>
           <div className="hero-note">
             <span className="monogram">W</span>
@@ -49,7 +57,12 @@ export default function Home() {
         <div><HeartIcon /><span>Persoonlijke aandacht</span></div>
         <div><HomeIcon /><span>Salon aan huis in Sneek</span></div>
         <div><SparklesIcon /><span>Gelnagels &amp; nail art</span></div>
-        <div><ClockIcon /><span>Alleen op afspraak</span></div>
+        <div><ClockIcon /><span>Binnenkort geopend</span></div>
+      </section>
+
+      <section className="home-pricing section-shell" id="prijzen" data-reveal>
+        <div className="section-heading heading-split"><div><p className="eyebrow"><span /> Kennismakingsprijzen</p><h2>Een mooie start,<br /><em>voor een mooie prijs.</em></h2></div><p>Bij de opening profiteer je van speciale kennismakingsprijzen. Reserveren is nu nog niet mogelijk.</p></div>
+        <PricingList compact />
       </section>
 
       <section className="services section-shell" id="behandelingen" data-reveal>
@@ -83,14 +96,14 @@ export default function Home() {
 
       <section className="booking-cta section-shell" data-reveal>
         <span className="booking-number">WYJONA / 26</span>
-        <p className="eyebrow centered"><span /> Klaar voor een nieuwe set?</p>
-        <h2>Toe aan <em>nieuwe nagels?</em></h2>
-        <p>Vertel me waar je naar zoekt en plan eenvoudig jouw afspraak.</p>
-        <Link href="/afspraak" className="button button-light">Plan je afspraak <ArrowUpRightIcon /></Link>
+        <p className="eyebrow centered"><span /> Nog niet geopend</p>
+        <h2>Iets moois <em>komt eraan.</em></h2>
+        <p>We openen binnenkort in Sneek. Afspraken maken is op dit moment nog niet mogelijk.</p>
+        <Link href="/afspraak" className="button button-light">Bekijk openingsnieuws <ArrowUpRightIcon /></Link>
       </section>
 
       <section className="location section-shell" data-reveal>
-        <div className="location-copy"><p className="eyebrow"><span /> Locatie</p><h2>Nagelsalon<br /><em>in Sneek.</em></h2><p>Nails By Wyjona is een kleinschalige nagelsalon aan huis in Sneek. Klanten uit Sneek en de omliggende plaatsen binnen ongeveer 10–20 km zijn natuurlijk van harte welkom.</p><div className="address"><MapPinIcon /><div><strong>Monnikmolen 41</strong><span>8608 XX Sneek · Friesland</span></div></div></div>
+        <div className="location-copy"><p className="eyebrow"><span /> Binnenkort in Sneek</p><h2>Nagelsalon<br /><em>in Sneek.</em></h2><p>Nails By Wyjona opent binnenkort als kleinschalige nagelsalon aan huis in Sneek. Na de opening zijn klanten uit Sneek en omliggende plaatsen van harte welkom.</p><div className="address"><MapPinIcon /><div><strong>Monnikmolen 41</strong><span>8608 XX Sneek · Friesland</span></div></div></div>
         <div className="map-card"><iframe title="Kaart van Monnikmolen 41 in Sneek" src="https://www.google.com/maps?q=Monnikmolen+41,+Sneek,+Nederland&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><a className="map-label" href="https://maps.google.com/?q=Monnikmolen+41+Sneek" target="_blank" rel="noreferrer"><span><MapPinIcon /> Sneek</span><small>Open route <ArrowUpRightIcon /></small></a></div>
       </section>
 

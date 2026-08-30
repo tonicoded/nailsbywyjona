@@ -7,14 +7,15 @@ export function SiteFooter() {
       <div className="footer-main content-shell">
         <div>
           <Link href="/" className="footer-brand">Nails <em>By Wyjona</em></Link>
-          <p>Gelnagels &amp; Nail Art in Sneek</p>
+          <p>Binnenkort geopend · Gelnagels &amp; Nail Art in Sneek</p>
         </div>
         <div className="footer-links">
           <div>
             <span>Ontdek</span>
             <Link href="/">Home</Link>
             <Link href="/over-mij">Over mij</Link>
-            <Link href="/afspraak">Afspraak maken</Link>
+            <Link href="/prijzen">Prijzen</Link>
+            <Link href="/afspraak">Binnenkort open</Link>
           </div>
           <div>
             <span>Volg &amp; vind</span>

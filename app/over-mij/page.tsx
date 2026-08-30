@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ArrowUpRightIcon, HeartIcon, SparklesIcon } from "@/components/icons";
 
-export const metadata = { title: "Over mij | Nails By Wyjona", description: "Maak kennis met Wyjona en haar persoonlijke nagelsalon aan huis in Sneek." };
+export const metadata = { title: "Over Wyjona | Nagelstyliste in Sneek", description: "Maak kennis met Wyjona, 26 jaar en oprichter van Nails By Wyjona: een persoonlijke nagelsalon aan huis die binnenkort opent in Sneek.", alternates: { canonical: "/over-mij" } };
 
 export default function AboutPage() {
   return (
@@ -16,8 +16,8 @@ export default function AboutPage() {
       </section>
 
       <section className="story section-shell" data-reveal>
-        <p className="story-lead">Voor mij is een afspraak meer dan alleen <em>mooie nagels.</em></p>
-        <div className="story-body"><p>Het is ook even een rustig moment voor jezelf. In mijn salon aan huis ontvang ik je in een ontspannen en persoonlijke setting, zonder drukte en met alle aandacht voor jouw wensen.</p><p>Of je nu houdt van clean en naturel, een klassieke French of juist een creatief design: we kijken samen wat mooi staat en goed voelt. Mijn doel is simpel — jij gaat de deur uit met een set waar je steeds opnieuw blij van wordt.</p></div>
+        <p className="story-lead">Binnenkort draait het hier om meer dan alleen <em>mooie nagels.</em></p>
+        <div className="story-body"><p>Mijn salon aan huis is nog niet geopend, maar ik kijk ernaar uit je straks te ontvangen in een ontspannen en persoonlijke setting, zonder drukte en met alle aandacht voor jouw wensen.</p><p>Of je nu houdt van clean en naturel, een klassieke French of juist een creatief design: straks kijken we samen wat mooi staat en goed voelt. Tot de opening kun je hier alvast kennismaken met mijn stijl.</p></div>
       </section>
 
       <section className="values-section" data-reveal>
@@ -28,7 +28,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="simple-cta section-shell" data-reveal><p className="eyebrow centered"><span /> Zin in een afspraak?</p><h2>Jouw volgende set<br /><em>begint hier.</em></h2><Link href="/afspraak" className="button button-dark">Plan je afspraak <ArrowUpRightIcon /></Link></section>
+      <section className="simple-cta section-shell" data-reveal><p className="eyebrow centered"><span /> Binnenkort geopend</p><h2>Ontdek alvast onze<br /><em>kennismakingsprijzen.</em></h2><Link href="/prijzen" className="button button-dark">Bekijk prijzen <ArrowUpRightIcon /></Link></section>
       <SiteFooter />
     </main>
   );

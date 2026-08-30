@@ -1,21 +1,35 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { BookingPlanner } from "@/components/booking-planner";
-import { ClockIcon, MapPinIcon, MessageIcon } from "@/components/icons";
+import { ArrowRightIcon, ClockIcon, HeartIcon, MapPinIcon } from "@/components/icons";
 
-export const metadata = { title: "Afspraak maken | Nails By Wyjona", description: "Vraag eenvoudig een afspraak aan voor gelnagels of nail art bij Nails By Wyjona in Sneek." };
+export const metadata: Metadata = {
+  title: "Binnenkort geopend in Sneek",
+  description: "Nails By Wyjona opent binnenkort in Sneek. Afspraken maken is nog niet mogelijk. Maak alvast kennis met Wyjona en bekijk de kennismakingsprijzen.",
+  alternates: { canonical: "/afspraak" },
+};
 
-export default function BookingPage() {
+export default function OpeningSoonPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="booking-page-hero section-shell" data-reveal>
-        <div className="booking-page-copy"><p className="eyebrow"><span /> Afspraak maken</p><h1>Tijd voor<br /><em>jouw nieuwe set.</em></h1><p>Kies zelf een datum en exact tijdstip dat jou goed uitkomt. Ik laat je per e-mail zo snel mogelijk weten of het moment beschikbaar is.</p><div className="booking-facts"><div><MapPinIcon /><span><strong>Salon aan huis</strong>Monnikmolen 41, Sneek</span></div><div><ClockIcon /><span><strong>Kies jouw moment</strong>Datum en exacte voorkeurstijd</span></div><div><MessageIcon /><span><strong>Bevestiging per e-mail</strong>Persoonlijk contact met Wyjona</span></div></div></div>
-        <div className="booking-side-image"><Image src="/images/nail-art-espresso.png" alt="Elegante espresso nail art" fill priority sizes="(max-width: 900px) 100vw, 36vw" /></div>
+      <section className="opening-hero section-shell" data-reveal>
+        <div className="opening-copy">
+          <p className="eyebrow"><span /> Binnenkort geopend in Sneek</p>
+          <h1>Nog even geduld,<br /><em>iets moois komt eraan.</em></h1>
+          <p>Nails By Wyjona is nog niet geopend. Daarom kun je op dit moment nog geen afspraak maken. Achter de schermen wordt alles met zorg voorbereid voor een persoonlijke en ontspannen nagelervaring.</p>
+          <div className="opening-actions"><Link href="/over-mij" className="button button-dark">Maak kennis met Wyjona <ArrowRightIcon /></Link><Link href="/prijzen" className="text-link">Bekijk prijzen <ArrowRightIcon /></Link></div>
+        </div>
+        <div className="opening-image"><Image src="/images/nail-art-espresso.png" alt="Elegante nail art van Nails By Wyjona in Sneek" fill priority sizes="(max-width: 900px) 100vw, 45vw" /><span>Binnenkort · Sneek</span></div>
       </section>
-      <section className="planner-section section-shell" data-reveal><div className="planner-intro"><p className="eyebrow"><span /> Jouw voorkeur</p><h2>Plan jouw<br /><em>moment.</em></h2><p>Kies rustig jouw behandeling, datum en tijd. Je aanvraag komt rechtstreeks bij Wyjona binnen en wordt daarna persoonlijk bevestigd.</p></div><BookingPlanner /></section>
-      <section className="booking-steps section-shell" data-reveal><article><span>01</span><h3>Kies je behandeling</h3><p>Geef aan waar je naar op zoek bent en beschrijf eventueel jouw inspiratie.</p></article><article><span>02</span><h3>Selecteer datum &amp; tijd</h3><p>Kies in de agenda een datum en exact tijdstip dat jou goed uitkomt.</p></article><article><span>03</span><h3>Ontvang bevestiging</h3><p>Wyjona ontvangt je aanvraag per e-mail en bevestigt persoonlijk jouw afspraak.</p></article></section>
+
+      <section className="opening-status section-shell" data-reveal>
+        <article><ClockIcon /><span>01</span><h2>Nog niet geopend</h2><p>De salon is nog in voorbereiding. Er worden daarom nog geen afspraken aangenomen.</p></article>
+        <article><HeartIcon /><span>02</span><h2>Wel alvast kennismaken</h2><p>Lees meer over Wyjona, haar stijl en de persoonlijke sfeer die centraal komt te staan.</p></article>
+        <article><MapPinIcon /><span>03</span><h2>Binnenkort in Sneek</h2><p>De salon aan huis opent aan de Monnikmolen in Sneek. Het openingsnieuws volgt via deze website.</p></article>
+      </section>
       <SiteFooter />
     </main>
   );
