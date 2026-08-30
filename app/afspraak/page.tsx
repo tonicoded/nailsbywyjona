@@ -15,7 +15,7 @@ export default function OpeningSoonPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="opening-hero section-shell" data-reveal>
+      <section className="opening-hero section-shell">
         <div className="opening-copy">
           <p className="eyebrow"><span /> Binnenkort geopend in Sneek</p>
           <h1>Nog even geduld,<br /><em>iets moois komt eraan.</em></h1>

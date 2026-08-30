@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="inner-hero section-shell" data-reveal>
+      <section className="inner-hero section-shell">
         <div className="inner-hero-copy"><p className="eyebrow"><span /> Over mij</p><h1>Hi, ik ben<br /><em>Wyjona.</em></h1><p>26 jaar, woonachtig in Sneek en gek op het maken van mooie gelnagels die precies bij jou passen.</p></div>
         <div className="inner-hero-image about-placeholder"><Image src="/images/hero-nude-gelnails.png" alt="Verzorgde naturel gelnagels in de stijl van Nails By Wyjona" fill priority sizes="(max-width: 800px) 100vw, 50vw" /><div className="photo-note"><span>W</span><p>Nails by Wyjona<br />Sneek · Friesland</p></div></div>
       </section>

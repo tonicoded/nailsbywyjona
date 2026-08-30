@@ -15,7 +15,7 @@ export default function PricesPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="prices-hero section-shell" data-reveal>
+      <section className="prices-hero section-shell">
         <div className="prices-title"><p className="eyebrow"><span /> Kennismakingsprijzen</p><h1>Mooi geprijsd,<br /><em>met alle aandacht.</em></h1><p>Verzorgde gelnagels, een rustige sfeer en persoonlijke aandacht — straks gewoon in Sneek.</p></div>
         <aside className="prices-hero-card"><span className="status-line"><i className="status-dot" /> Opening binnenkort</span><div><small>Behandelingen vanaf</small><strong>€ 27</strong></div><p>Introductietarieven voor de eerste periode na opening. Reserveren is nu nog niet mogelijk.</p></aside>
       </section>
