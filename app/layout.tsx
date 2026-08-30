@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nails-by-wyjona.sites.openai.com'),
+  metadataBase: new URL('https://nails-by-wyjona.anthonyvvza.chatgpt.site'),
   title: 'Nails By Wyjona | Gelnagels & Nail Art in Sneek',
   description: 'Persoonlijke gelnagels en nail art in een rustige salon aan huis in Sneek.',
   openGraph: {
