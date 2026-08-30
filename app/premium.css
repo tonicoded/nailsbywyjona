@@ -1,0 +1,118 @@
+/* Pre-launch and pricing styles live in a separate bundle to prevent stale CSS
+   from being paired with newer route markup on edge deployments. */
+svg { max-width: 100%; }
+
+.site-header .nav-shell { height: 88px; }
+.opening-pill { border-color: rgba(32,27,24,.22); background: rgba(216,196,181,.22); text-transform: none; letter-spacing: .035em; }
+.opening-pill:hover { border-color: var(--ink); background: var(--ink); }
+.status-dot { display: inline-block; width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: #a47761; box-shadow: 0 0 0 5px rgba(164,119,97,.12); }
+.mobile-booking-link > span { display: flex; align-items: center; gap: 12px; }
+.mobile-booking-link .status-dot { background: #e7bba4; box-shadow: 0 0 0 5px rgba(231,187,164,.13); }
+.mobile-menu-panel { inset: 88px 0 auto; min-height: calc(100svh - 88px); }
+
+.home-pricing { position: relative; padding-block: 140px; border-bottom: 1px solid var(--line); }
+.pricing-menu { width: 100%; }
+.treatment-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
+.treatment-card { min-height: 365px; display: flex; flex-direction: column; justify-content: space-between; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,253,250,.38); transition: transform .3s ease, background .3s ease, box-shadow .3s ease; }
+.treatment-card:hover { z-index: 2; transform: translateY(-5px); background: var(--paper); box-shadow: 0 24px 65px rgba(32,27,24,.09); }
+.treatment-card.featured { background: var(--ink); color: var(--cream); }
+.treatment-card-top { display: flex; justify-content: space-between; color: #9f7966; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.treatment-card.featured .treatment-card-top { color: #d5af9a; }
+.treatment-card-top small { padding: 7px 9px; border: 1px solid rgba(213,175,154,.4); color: #d5af9a; font-size: 7px; letter-spacing: .13em; }
+.treatment-card p { margin: 0 0 12px; color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.treatment-card.featured p { color: #b9aea7; }
+.treatment-card h3 { max-width: 260px; margin: 0; font: 400 34px/1.03 Georgia, serif; letter-spacing: -.035em; }
+.treatment-card > strong { font: 400 50px/1 Georgia, serif; letter-spacing: -.04em; }
+.extras-list { margin-top: 64px; border-top: 1px solid var(--ink); }
+.extras-heading { min-height: 70px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); font: 400 24px/1 Georgia, serif; }
+.extras-heading small { color: var(--muted); font: 9px/1 var(--font-geist-sans); letter-spacing: .12em; text-transform: uppercase; }
+.extra-row { min-height: 84px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 25px; border-bottom: 1px solid var(--line); }
+.extra-row > div { display: flex; align-items: baseline; gap: 16px; min-width: 0; }
+.extra-row strong { font: 400 22px/1 Georgia, serif; }
+.extra-row small { color: var(--muted); font-size: 10px; }
+.extra-row b { font: 400 22px/1 Georgia, serif; white-space: nowrap; }
+.pricing-more { display: flex; align-items: center; justify-content: flex-end; gap: 12px; width: max-content; margin: 32px 0 0 auto; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; }
+.pricing-more svg { width: 15px !important; height: 15px !important; }
+
+.prices-hero { min-height: 700px; display: grid; grid-template-columns: 1.18fr .72fr; gap: clamp(70px,9vw,145px); align-items: end; padding-block: 125px 95px; border-bottom: 1px solid var(--line); }
+.prices-title h1, .opening-copy h1 { margin: 0; font: 400 clamp(68px,7vw,108px)/.89 Georgia, serif; letter-spacing: -.065em; }
+.prices-title h1 em, .opening-copy h1 em { color: #9f7966; font-weight: 400; }
+.prices-title > p:last-child { max-width: 550px; margin: 35px 0 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.prices-hero-card { min-height: 390px; display: flex; flex-direction: column; justify-content: space-between; padding: 34px; background: var(--ink); color: var(--cream); box-shadow: 28px 28px 0 #e9ded3; }
+.status-line { display: flex; align-items: center; gap: 13px; color: #d7cdc6; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.prices-hero-card > div { display: flex; flex-direction: column; gap: 10px; }
+.prices-hero-card > div small { color: #a89e98; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.prices-hero-card > div strong { font: 400 78px/.9 Georgia, serif; color: #e2bca8; letter-spacing: -.06em; }
+.prices-hero-card > p { max-width: 320px; margin: 0; color: #aaa09a; font-size: 12px; line-height: 1.7; }
+.prices-main { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(270px,.55fr); gap: clamp(70px,8vw,120px); padding-block: 130px 150px; align-items: start; }
+.prices-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 30px; }
+.prices-section-heading > span { font: 400 38px/1 Georgia, serif; }
+.prices-section-heading p { margin: 0; color: var(--muted); font-size: 11px; }
+.price-note { position: sticky; top: 120px; padding: 34px; background: #e9ded3; }
+.price-note > span { color: #9f7966; font-size: 8px; letter-spacing: .15em; text-transform: uppercase; }
+.price-note h2 { margin: 70px 0 20px; font: 400 38px/1.03 Georgia, serif; letter-spacing: -.04em; }
+.price-note p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.price-note-signature { margin-top: 70px; font: 400 25px/.75 Georgia, serif; }
+.price-note-signature em { display: block; margin-left: 22px; color: #9f7966; font-size: 16px; }
+
+.opening-hero { min-height: 760px; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(60px,8vw,120px); align-items: center; padding-block: 90px; }
+.opening-copy > p:not(.eyebrow) { max-width: 580px; margin: 34px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
+.opening-actions { display: flex; align-items: center; gap: 28px; margin-top: 38px; }
+.opening-image { position: relative; height: 650px; overflow: hidden; background: var(--nude); }
+.opening-image img { object-fit: cover; }
+.opening-image > span { position: absolute; right: 18px; bottom: 18px; padding: 11px 13px; background: rgba(255,253,250,.92); font-size: 8px; letter-spacing: .14em; text-transform: uppercase; }
+.opening-status { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); padding-bottom: 140px; }
+.opening-status article { position: relative; min-height: 330px; padding: 32px; border: 1px solid var(--line); border-right: 0; }
+.opening-status article:last-child { border-right: 1px solid var(--line); }
+.opening-status article > svg { width: 24px !important; height: 24px !important; max-width: 24px !important; color: #9f7966; }
+.opening-status article > span { position: absolute; top: 34px; right: 32px; color: var(--muted); font-size: 9px; }
+.opening-status h2 { margin: 100px 0 16px; font: 400 30px/1 Georgia, serif; }
+.opening-status p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .site-header .nav-shell { height: 76px; }
+  .mobile-menu-panel { inset: 76px 0 auto; min-height: calc(100svh - 76px); }
+  .prices-hero, .prices-main, .opening-hero { grid-template-columns: 1fr; }
+  .prices-hero { min-height: 0; gap: 60px; padding-block: 100px 90px; }
+  .prices-hero-card { width: min(520px,calc(100% - 28px)); margin-left: auto; }
+  .prices-main { gap: 70px; padding-block: 95px 120px; }
+  .price-note { position: static; }
+  .opening-hero { gap: 55px; }
+  .opening-image { height: 620px; order: -1; }
+}
+
+@media (max-width: 640px) {
+  .site-header .nav-shell { height: 70px; }
+  .mobile-menu-panel { inset: 70px 0 auto; min-height: calc(100svh - 70px); }
+  .home-pricing { width: calc(100% - 32px); padding-block: 88px; }
+  .treatment-grid { grid-template-columns: 1fr; }
+  .treatment-card { min-height: 280px; padding: 24px; }
+  .treatment-card h3 { font-size: 30px; }
+  .treatment-card > strong { font-size: 43px; }
+  .extras-list { margin-top: 46px; }
+  .extras-heading { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; }
+  .extra-row { min-height: 90px; }
+  .extra-row > div { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .extra-row strong, .extra-row b { font-size: 19px; }
+  .pricing-more { font-size: 9px; }
+  .prices-hero { width: calc(100% - 32px); gap: 50px; padding-block: 78px 70px; }
+  .prices-title h1, .opening-copy h1 { font-size: clamp(50px,14vw,63px); }
+  .prices-title > p:last-child { margin-top: 27px; font-size: 14px; }
+  .prices-hero-card { width: calc(100% - 16px); min-height: 330px; padding: 27px; box-shadow: 16px 16px 0 #e9ded3; }
+  .prices-hero-card > div strong { font-size: 65px; }
+  .prices-main { width: calc(100% - 32px); gap: 48px; padding-block: 78px 95px; }
+  .prices-section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .price-note { padding: 28px 24px; }
+  .price-note h2 { margin-top: 55px; font-size: 34px; }
+  .opening-hero { width: 100%; padding: 0 0 78px; gap: 48px; }
+  .opening-copy { padding-inline: 16px; }
+  .opening-image { width: 100%; height: 58svh; max-height: 600px; }
+  .opening-copy > p:not(.eyebrow) { margin-top: 26px; font-size: 14px; }
+  .opening-actions { display: grid; gap: 22px; }
+  .opening-actions .button { width: 100%; justify-content: space-between; gap: 14px; font-size: 9px; }
+  .opening-actions .text-link { width: max-content; }
+  .opening-status { width: calc(100% - 32px); grid-template-columns: 1fr; padding-bottom: 90px; }
+  .opening-status article { min-height: 285px; border-right: 1px solid var(--line); border-bottom: 0; }
+  .opening-status article:last-child { border-bottom: 1px solid var(--line); }
+  .opening-status h2 { margin-top: 75px; }
+}
