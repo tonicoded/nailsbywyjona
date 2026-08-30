@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { ArrowUpRightIcon, CheckIcon } from "@/components/icons";
 
 export function BookingPlanner() {
   const [copied, setCopied] = useState(false);
@@ -53,7 +54,7 @@ export function BookingPlanner() {
         </label>
       </div>
       <button type="submit" className="button button-dark submit-button">
-        {copied ? <>✓ Gekopieerd — open Instagram</> : <>Kopieer &amp; open Instagram ↗</>}
+        {copied ? <><CheckIcon /> Gekopieerd — open Instagram</> : <>Kopieer &amp; open Instagram <ArrowUpRightIcon /></>}
       </button>
       <p className="form-note">Je aanvraag is pas definitief nadat Wyjona de afspraak heeft bevestigd.</p>
     </form>

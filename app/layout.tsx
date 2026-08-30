@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { RevealController } from '@/components/reveal-controller';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nails-by-wyjona.anthonyvvza.chatgpt.site'),
+  metadataBase: new URL('https://nailsbywyjona.nl'),
   title: 'Nails By Wyjona | Gelnagels & Nail Art in Sneek',
   description: 'Persoonlijke gelnagels en nail art in een rustige salon aan huis in Sneek.',
   openGraph: {
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <RevealController />
         {children}
       </body>
     </html>

@@ -39,3 +39,23 @@ export function MessageIcon(props: IconProps) {
 export function InstagramIcon(props: IconProps) {
   return <svg {...base} {...props}><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.3" cy="6.7" r=".8" fill="currentColor" stroke="none" /></svg>;
 }
+
+export function ArrowUpRightIcon(props: IconProps) {
+  return <svg {...base} {...props}><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg>;
+}
+
+export function ArrowDownIcon(props: IconProps) {
+  return <svg {...base} {...props}><path d="M12 4v16" /><path d="m6 14 6 6 6-6" /></svg>;
+}
+
+export function ArrowRightIcon(props: IconProps) {
+  return <svg {...base} {...props}><path d="M4 12h16" /><path d="m14 6 6 6-6 6" /></svg>;
+}
+
+export function ArrowLeftIcon(props: IconProps) {
+  return <svg {...base} {...props}><path d="M20 12H4" /><path d="m10 6-6 6 6 6" /></svg>;
+}
+
+export function CheckIcon(props: IconProps) {
+  return <svg {...base} {...props}><path d="m5 12 4 4L19 6" /></svg>;
+}
