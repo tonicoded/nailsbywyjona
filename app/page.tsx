@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ClockIcon, HeartIcon, HomeIcon, MapPinIcon, SparklesIcon } from "@/components/icons";
 
 const services = [
   { number: "01", title: "Gelnagels", text: "Sterke, verzorgde nagels met een prachtige glanzende finish.", image: "/images/hero-nude-gelnails.png" },
@@ -45,10 +46,10 @@ export default function Home() {
       </section>
 
       <section className="trust-bar" aria-label="Waarom Nails By Wyjona">
-        <div><i>♡</i><span>Persoonlijke aandacht</span></div>
-        <div><i>⌂</i><span>Salon aan huis in Sneek</span></div>
-        <div><i>✦</i><span>Gelnagels &amp; nail art</span></div>
-        <div><i>◷</i><span>Alleen op afspraak</span></div>
+        <div><HeartIcon /><span>Persoonlijke aandacht</span></div>
+        <div><HomeIcon /><span>Salon aan huis in Sneek</span></div>
+        <div><SparklesIcon /><span>Gelnagels &amp; nail art</span></div>
+        <div><ClockIcon /><span>Alleen op afspraak</span></div>
       </section>
 
       <section className="services section-shell" id="behandelingen">
@@ -76,7 +77,7 @@ export default function Home() {
       </section>
 
       <section className="about-preview section-shell">
-        <div className="about-image-wrap"><div className="about-image"><Image src="/images/wyjona-studio.png" alt="Wyjona werkt aan de gelnagels van een klant in haar salon aan huis" fill sizes="(max-width: 800px) 100vw, 50vw" /></div><span className="roundel">Nails · By Wyjona · Sneek ·</span></div>
+        <div className="about-image-wrap"><div className="about-image"><Image src="/images/glazed-blush-nails.png" alt="Zacht blush gelnagels met een verfijnde glazed finish" fill sizes="(max-width: 800px) 100vw, 50vw" /></div><span className="roundel">Nails · By Wyjona · Sneek ·</span></div>
         <div className="about-copy"><p className="eyebrow"><span /> Over mij</p><h2>Hi, ik ben <em>Wyjona.</em></h2><p>Ik ben 26 jaar en woon in Sneek. Wat begon met een liefde voor mooie nagels groeide uit tot mijn eigen nagelsalon aan huis. Ik vind het belangrijk dat je je op je gemak voelt en met nagels naar huis gaat waar je écht blij van wordt.</p><Link href="/over-mij" className="text-link">Meer over mij <span>→</span></Link><blockquote>“Een mooi moment voor jezelf,<br />met aandacht voor ieder detail.”</blockquote></div>
       </section>
 
@@ -89,8 +90,8 @@ export default function Home() {
       </section>
 
       <section className="location section-shell">
-        <div className="location-copy"><p className="eyebrow"><span /> Locatie</p><h2>Nagelsalon<br /><em>in Sneek.</em></h2><p>Nails By Wyjona is een kleinschalige nagelsalon aan huis in Sneek. Klanten uit Sneek en de omliggende plaatsen binnen ongeveer 10–20 km zijn natuurlijk van harte welkom.</p><div className="address"><i>⌖</i><div><strong>Monnikmolen 41</strong><span>8608 XX Sneek · Friesland</span></div></div></div>
-        <a className="map-card" href="https://maps.google.com/?q=Monnikmolen+41+Sneek" target="_blank" rel="noreferrer" aria-label="Bekijk Nails By Wyjona op de kaart"><div className="map-grid" /><span className="map-pin">⌖</span><div className="map-label"><span>Sneek</span><small>Route bekijken ↗</small></div></a>
+        <div className="location-copy"><p className="eyebrow"><span /> Locatie</p><h2>Nagelsalon<br /><em>in Sneek.</em></h2><p>Nails By Wyjona is een kleinschalige nagelsalon aan huis in Sneek. Klanten uit Sneek en de omliggende plaatsen binnen ongeveer 10–20 km zijn natuurlijk van harte welkom.</p><div className="address"><MapPinIcon /><div><strong>Monnikmolen 41</strong><span>8608 XX Sneek · Friesland</span></div></div></div>
+        <div className="map-card"><iframe title="Kaart van Monnikmolen 41 in Sneek" src="https://www.google.com/maps?q=Monnikmolen+41,+Sneek,+Nederland&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><a className="map-label" href="https://maps.google.com/?q=Monnikmolen+41+Sneek" target="_blank" rel="noreferrer"><span><MapPinIcon /> Sneek</span><small>Open route ↗</small></a></div>
       </section>
 
       <SiteFooter />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InstagramIcon } from "@/components/icons";
 
 export function SiteFooter() {
   return (
@@ -17,7 +18,7 @@ export function SiteFooter() {
           </div>
           <div>
             <span>Volg &amp; vind</span>
-            <a href="https://www.instagram.com/nailsbywyjona/" target="_blank" rel="noreferrer">◎ Instagram</a>
+            <a href="https://www.instagram.com/nailsbywyjona/" target="_blank" rel="noreferrer"><InstagramIcon className="footer-icon" /> Instagram</a>
             <a href="https://maps.google.com/?q=Monnikmolen+41+Sneek" target="_blank" rel="noreferrer">Route naar de salon</a>
             <Link href="/privacy">Privacy</Link>
           </div>

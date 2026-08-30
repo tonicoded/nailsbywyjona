@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { HeartIcon, SparklesIcon } from "@/components/icons";
 
 export const metadata = { title: "Over mij | Nails By Wyjona", description: "Maak kennis met Wyjona en haar persoonlijke nagelsalon aan huis in Sneek." };
 
@@ -11,7 +12,7 @@ export default function AboutPage() {
       <SiteHeader />
       <section className="inner-hero section-shell">
         <div className="inner-hero-copy"><p className="eyebrow"><span /> Over mij</p><h1>Hi, ik ben<br /><em>Wyjona.</em></h1><p>26 jaar, woonachtig in Sneek en gek op het maken van mooie gelnagels die precies bij jou passen.</p></div>
-        <div className="inner-hero-image"><Image src="/images/wyjona-studio.png" alt="Wyjona in haar nagelsalon aan huis" fill priority sizes="(max-width: 800px) 100vw, 50vw" /></div>
+        <div className="inner-hero-image about-placeholder"><Image src="/images/hero-nude-gelnails.png" alt="Verzorgde naturel gelnagels in de stijl van Nails By Wyjona" fill priority sizes="(max-width: 800px) 100vw, 50vw" /><div className="photo-note"><span>W</span><p>Nails by Wyjona<br />Sneek · Friesland</p></div></div>
       </section>
 
       <section className="story section-shell">
@@ -21,8 +22,8 @@ export default function AboutPage() {
 
       <section className="values-section">
         <div className="section-shell values-grid">
-          <article><span>01</span><i>♡</i><h2>Persoonlijke aandacht</h2><p>Geen haastwerk, maar rustig de tijd om te luisteren naar jouw idee en te kijken wat bij je past.</p></article>
-          <article><span>02</span><i>✦</i><h2>Verzorgd tot in detail</h2><p>Een mooie basis, nette afwerking en oog voor de kleine details die een set bijzonder maken.</p></article>
+          <article><span>01</span><HeartIcon /><h2>Persoonlijke aandacht</h2><p>Geen haastwerk, maar rustig de tijd om te luisteren naar jouw idee en te kijken wat bij je past.</p></article>
+          <article><span>02</span><SparklesIcon /><h2>Verzorgd tot in detail</h2><p>Een mooie basis, nette afwerking en oog voor de kleine details die een set bijzonder maken.</p></article>
           <article className="value-image"><Image src="/images/botanical-nails.png" alt="Subtiele botanische nail art" fill sizes="(max-width: 800px) 100vw, 34vw" /></article>
         </div>
       </section>
